@@ -242,27 +242,6 @@ flow_regime = results["flow_regime"]
 friction_factor = results["friction_factor"]
 pressure_drop = results["pressure_drop"]
 
-# ---------------------------------------------------------
-# SHARE VERIFIED RESULTS WITH AI ENGINEERING ASSISTANT
-# ------------------------------------------------------
-
-st.session_state["pipe_flow_results"] = {
-    "fluid": fluid_choice,
-    "density": density,
-    "viscosity": viscosity,
-    "diameter": diameter,
-    "length": length,
-    "roughness": roughness,
-    "flow_rate": flow_rate,
-    "velocity": velocity,
-    "reynolds_number": reynolds_number,
-    "flow_regime": flow_regime,
-    "friction_factor": friction_factor,
-    "pressure_drop": pressure_drop,
-}
-
-
-
 
 # ---------------------------------------------------------
 # MAIN RESULTS
