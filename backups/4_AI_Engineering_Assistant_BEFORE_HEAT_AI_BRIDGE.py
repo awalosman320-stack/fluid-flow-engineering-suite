@@ -175,16 +175,13 @@ if "engineering_context" not in st.session_state:
 
 
 # ============================================================
-# ============================================================
-# VERIFIED ENGINEERING RESULTS BRIDGE
+# PIPE FLOW VERIFIED RESULTS BRIDGE
 # ============================================================
 
-context_sections = []
-
-# PIPE FLOW VERIFIED RESULTS
 if st.session_state.get("pipe_flow_results"):
     pipe = st.session_state["pipe_flow_results"]
-    context_sections.append(f"""VERIFIED PIPE FLOW RESULTS
+
+    st.session_state.engineering_context = f"""VERIFIED PIPE FLOW RESULTS
 
 Fluid: {pipe.get("fluid")}
 Density: {pipe.get("density")}
@@ -200,35 +197,8 @@ Friction factor: {pipe.get("friction_factor")}
 Pressure drop: {pipe.get("pressure_drop")}
 
 These values were produced by the deterministic Pipe Flow calculation engine.
-Treat them as authoritative numerical results and provide interpretation only.""")
-
-# HEAT TRANSFER VERIFIED RESULTS
-if st.session_state.get("heat_transfer_results"):
-    heat = st.session_state["heat_transfer_results"]
-    context_sections.append(f"""VERIFIED HEAT TRANSFER RESULTS
-
-Thermal conductivity: {heat.get("thermal_conductivity")}
-Wall area: {heat.get("wall_area")}
-Wall thickness: {heat.get("wall_thickness")}
-Hot-side temperature: {heat.get("hot_temperature")}
-Cold-side temperature: {heat.get("cold_temperature")}
-Conduction heat-transfer rate: {heat.get("conduction_heat_rate")}
-Initial temperature: {heat.get("initial_temperature")}
-Ambient temperature: {heat.get("ambient_temperature")}
-Target temperature: {heat.get("target_temperature")}
-Heat-transfer coefficient: {heat.get("heat_transfer_coefficient")}
-Cooling area: {heat.get("cooling_area")}
-Object mass: {heat.get("object_mass")}
-Specific heat capacity: {heat.get("specific_heat")}
-Cooling time: {heat.get("cooling_time")}
-Verified temperature: {heat.get("verified_temperature")}
-Verification error: {heat.get("verification_error")}
-
-These values were produced by the deterministic Heat Transfer calculation engine.
-Treat them as authoritative numerical results and provide interpretation only.""")
-
-if context_sections:
-    st.session_state.engineering_context = "\\n\\n".join(context_sections)
+Treat them as authoritative numerical results and provide interpretation only.
+"""
 
 # ============================================================
 # HEADER

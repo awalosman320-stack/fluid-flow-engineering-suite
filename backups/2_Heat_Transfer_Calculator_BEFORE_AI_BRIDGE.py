@@ -441,31 +441,6 @@ if cooling_time is not None:
 
 
 # =========================================================
-# SHARE VERIFIED RESULTS WITH AI ENGINEERING ASSISTANT
-# =========================================================
-
-if cooling_time is not None:
-    st.session_state["heat_transfer_results"] = {
-        "thermal_conductivity": conductivity,
-        "wall_area": wall_area,
-        "wall_thickness": wall_thickness,
-        "hot_temperature": hot_temperature,
-        "cold_temperature": cold_temperature,
-        "conduction_heat_rate": conduction_heat_rate,
-        "initial_temperature": initial_temperature,
-        "ambient_temperature": ambient_temperature,
-        "target_temperature": target_temperature,
-        "heat_transfer_coefficient": heat_transfer_coefficient,
-        "cooling_area": cooling_area,
-        "object_mass": object_mass,
-        "specific_heat": specific_heat,
-        "cooling_time": cooling_time,
-        "verified_temperature": verified_temperature,
-        "verification_error": verification_error,
-    }
-
-
-# =========================================================
 # ENGINEERING ASSUMPTIONS
 # =========================================================
 
