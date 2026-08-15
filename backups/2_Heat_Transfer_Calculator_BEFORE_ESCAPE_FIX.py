@@ -46,9 +46,9 @@ st.markdown(
 
     Fourier's law:
 
-    \\[
+    \[
     Q = \\frac{kA(T_{hot}-T_{cold})}{L}
-    \\]
+    \]
 
     where:
 
@@ -151,11 +151,11 @@ st.markdown(
 
     The analytical solution is:
 
-    \\[
+    \[
     T(t)=T_{\\infty}
     +(T_0-T_{\\infty})
     e^{-hAt/(mc_p)}
-    \\]
+    \]
 
     where:
 
@@ -389,9 +389,9 @@ st.markdown(
 
     At the calculated time:
 
-    \\[
+    \[
     T(t_{target}) \\approx T_{target}
-    \\]
+    \]
 
     This provides an independent consistency check.
     """
