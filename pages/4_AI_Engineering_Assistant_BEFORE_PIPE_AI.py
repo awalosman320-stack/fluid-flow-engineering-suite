@@ -175,32 +175,6 @@ if "engineering_context" not in st.session_state:
 
 
 # ============================================================
-# PIPE FLOW VERIFIED RESULTS BRIDGE
-# ============================================================
-
-if st.session_state.get("pipe_flow_results"):
-    pipe = st.session_state["pipe_flow_results"]
-
-    st.session_state.engineering_context = f"""VERIFIED PIPE FLOW RESULTS
-
-Fluid: {pipe.get("fluid")}
-Density: {pipe.get("density")}
-Viscosity: {pipe.get("viscosity")}
-Pipe diameter: {pipe.get("diameter")}
-Pipe length: {pipe.get("length")}
-Pipe roughness: {pipe.get("roughness")}
-Flow rate: {pipe.get("flow_rate")}
-Velocity: {pipe.get("velocity")}
-Reynolds number: {pipe.get("reynolds_number")}
-Flow regime: {pipe.get("flow_regime")}
-Friction factor: {pipe.get("friction_factor")}
-Pressure drop: {pipe.get("pressure_drop")}
-
-These values were produced by the deterministic Pipe Flow calculation engine.
-Treat them as authoritative numerical results and provide interpretation only.
-"""
-
-# ============================================================
 # HEADER
 # ============================================================
 
