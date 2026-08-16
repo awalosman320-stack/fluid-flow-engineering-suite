@@ -227,6 +227,24 @@ Verification error: {heat.get("verification_error")}
 These values were produced by the deterministic Heat Transfer calculation engine.
 Treat them as authoritative numerical results and provide interpretation only.""")
 
+# ROCK & FLUID VERIFIED RESULTS
+if st.session_state.get("rock_fluid_results"):
+    rock = st.session_state["rock_fluid_results"]
+
+    context_sections.append(
+        f"""VERIFIED ROCK & FLUID DATA RESULTS
+
+Dataset row count: {rock.get("row_count")}
+Numeric column count: {rock.get("numeric_column_count")}
+
+Summary statistics:
+{rock.get("summary_statistics")}
+
+These values were produced by the deterministic Rock & Fluid Data calculation engine.
+Treat them as authoritative dataset-derived results and provide interpretation only."""
+    )
+
+
 if context_sections:
     st.session_state.engineering_context = "\\n\\n".join(context_sections)
 

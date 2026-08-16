@@ -170,13 +170,6 @@ else:
         summary_statistics.round(4),
         use_container_width=True,
     )
-    # SHARE VERIFIED RESULTS WITH AI ENGINEERING ASSISTANT
-    st.session_state["rock_fluid_results"] = {
-        "summary_statistics": summary_statistics.round(4).to_dict(orient="index"),
-        "row_count": int(len(data)),
-        "numeric_column_count": int(len(numeric_data.columns)),
-    }
-
 
 
 # =========================================================
