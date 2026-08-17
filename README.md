@@ -622,7 +622,7 @@ python -m pytest tests -v
 
 ```bash
 
-git clone <YOUR\_GITHUB\_REPOSITORY\_URL>
+git clone https://github.com/awalosman320-stack/fluid-flow-engineering-suite.git
 
 cd FLUID\_FLOW\_ENGINEERING\_SUITE
 
@@ -1097,6 +1097,15 @@ The deployment process requires:
 
 
 The Gemini API key should be configured through the deployment platform's secret-management system rather than committed to the repository.
+### Live Application
+
+The deployed application is available at:
+
+https://fluid-flow-engineering-suite-nbfqqeggas5e2tukqqw28w.streamlit.app/
+
+The AI Engineering Assistant is available at:
+
+https://fluid-flow-engineering-suite-nbfqqeggas5e2tukqqw28w.streamlit.app/AI_Engineering_Assistant
 
 
 
@@ -1138,11 +1147,11 @@ Current major components:
 
 | Runtime dependencies       | Complete    |
 
-| README documentation       | In progress |
+| README documentation       | Complete   |
 
-| GitHub deployment          | Pending     |
+| GitHub deployment          | Complete   |
 
-| Streamlit Cloud deployment | Pending     |
+| Streamlit Cloud deployment | Complete    |
 
 
 
@@ -1154,7 +1163,7 @@ Current major components:
 
 
 
-\*\*FluidFlow Engineering Suite\*\*
+\*\*Awal Osman\*\*
 
 
 
